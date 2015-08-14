@@ -1,0 +1,972 @@
+@import 'variables.less';
+
+@import 'layout.less';
+
+body{
+    font-family: philosopherregular;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+a{
+    color: white;
+    &:hover{
+        color: @hrefColor;
+        text-decoration: none;
+    }
+    &:visited{
+        text-decoration: none;
+        color: @hrefColor;
+    }
+    &:focus{
+        text-decoration: none;
+        color: @hrefColor;
+    }
+}
+h1{
+    font-weight: 400;
+}
+h2{
+    font-weight: 400;
+    font-size: 36px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+}
+h3{
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 400;
+}
+h4{
+    font-size: 18px;
+}
+p{
+    color: darkgrey;
+}
+.container{
+    width: 1320px;
+}
+.button{
+    outline: none;
+    border: 1px solid @hrefColor;
+    border-radius: 45px;
+    color: @hrefColor;
+    font-size: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    &--buy{
+        width: 100%;
+        font-size: 20px;
+        padding: 10px 25px;
+        position: relative;
+        top: 75px;
+  }
+  &--seo{
+    display: inline-block;
+    padding: 10px 37px;
+    position: relative;
+    bottom: -60px;
+  }
+}
+::-webkit-input-placeholder {color:white;}
+::-moz-placeholder          {color:white;}/* Firefox 19+ */
+.page-header{
+    background: url(img/header_bg.jpg);
+}
+.top-menu__container{
+    background: rgba(31, 31, 33, 0.8);
+    margin-bottom: 64px;
+}
+.top-menu{
+    vertical-align: middle;
+    line-height: 80px;
+    &__item{
+
+        &--tel{
+            & a{
+                font-size: 24px;
+                color: white;
+                &:hover{
+                    color:white;
+                }
+            }
+            & i{
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                background: url(img/telephone.svg);
+                margin-right: 10px;
+                position: relative;
+                top:3px;
+            }
+        }
+        &--mail{
+            & i{
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                background: url(img/mail.svg);
+                margin-right: 10px;
+                position: relative;
+                top:3px;
+            }
+            & a{
+                color: @hrefColor;
+                font-size: 18px;
+                &:hover{
+                    color:@hrefColor;
+                }
+            }
+        }
+        &--lk{
+            & i{
+                display: inline-block;
+                width: 21px;
+                height: 21px;
+                background: url(img/lk.svg);
+                margin-right: 10px;
+                position: relative;
+                top:3px;
+            }
+            & a{
+                font-size: 18px;
+                color: white;
+                &:hover{
+                    color:@hrefColor;
+                }
+            }
+        }
+    }
+} /* top-menu end */
+.menu{
+    margin-bottom: 120px;
+    &__items{
+        list-style: none;
+        text-align: center;
+    }
+    &__item{
+        display: inline-block;
+        padding-right: 50px;
+        position: relative;
+        &:after{
+            content: "/";
+            display: inline-block;
+            position: absolute;
+            color: #555;
+            font-size: 18px;
+            right:16px;
+        }
+        & a{
+            font-size: 18px;
+            &:hover{
+                text-decoration:  none;
+                color: @hrefColor;
+            }
+        }
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+}
+.tagline{
+    text-align: center;
+    margin-bottom: 55px;
+    & h1{
+        font-size: 120px;
+        line-height: 45px;
+        margin: 0px;
+        letter-spacing: 14px;
+    }
+    & p{
+        font-size: 20px;
+        letter-spacing: 5px;
+        padding-top: 4px;
+    }
+}
+.optima-info{
+    text-align: center;
+    margin-bottom: 107px;
+    & p{
+        color: darkgrey;
+        font-size: 16px;
+    }
+}
+main{
+    background: #393a3c;
+}
+.section-title{
+    text-align: center;
+}
+
+.section-container{
+    border-top:1px dashed #616163;
+    position: relative;
+    padding-top: 45px;
+    padding-left: 90px;
+    padding-right: 90px;
+    &:after{
+        content: "";
+        display: block;
+        background: url('img/sprites.png') no-repeat -61px 0;
+        width: 44px;
+        height: 22px;
+        position: absolute;
+        top: -11px;
+        right: 30px;
+    }
+}
+/* 
+88""Yb 88""Yb  dP"Yb  8888b.  88   88  dP""b8 888888     .dP"Y8 888888  dP""b8 888888 88  dP"Yb  88b 88 
+88__dP 88__dP dP   Yb  8I  Yb 88   88 dP   `"   88       `Ybo." 88__   dP   `"   88   88 dP   Yb 88Yb88 
+88"""  88"Yb  Yb   dP  8I  dY Y8   8P Yb        88       o.`Y8b 88""   Yb        88   88 Yb   dP 88 Y88 
+88     88  Yb  YbodP  8888Y"  `YbodP'  YboodP   88       8bodP' 888888  YboodP   88   88  YbodP  88  Y8  */
+
+
+.product{
+    padding-top: 30px;
+    & .product__item{
+        position: relative;
+    }
+    &__main{
+        margin-bottom: 35px;
+    }
+    & .but--product{
+        width: 340px;
+        padding: 15px 15px;
+        display: block;
+    }
+    & .jq-selectbox__select{
+        width: 150px;
+    }
+    & .jq-selectbox__select{
+        padding-left: 20px;
+    }
+    & table{
+        margin-bottom: 35px;
+    }
+    & .table-head tr:first-child{
+        border-top: none;
+    }
+    & .button--buy{
+        position: inherit;
+        display: inline-block;
+        width: 200px;
+        margin: 0 auto;
+    }
+    & .modal-item__info{
+        margin-bottom: 40px;
+    }
+    .product__buy--rel{
+        position: inherit;
+        top: -16px;
+        float: none;
+    }
+    .button--product{
+        position: absolute;
+        width: 69%;
+        max-height: 55px;
+        display: none;
+        z-index: 100;
+        &--sample{
+            padding-top: 2px;
+            top:70px;
+            margin-left: 52px;
+        }
+        &--specifications{
+            margin-left: 52px;
+            top:150px;
+        }
+    }
+    &__container{
+        & .product__shadow{
+            position: absolute;
+            top:0;
+            width: 100%;
+            height: 75.3%;
+            transition: all ease 0.3s;
+        }
+        &:hover{
+            & .product__shadow{
+                background: rgba(16, 18, 19, 0.9);
+            }
+        }
+        & img{
+            width: 100%;
+        }
+    }
+    &__info{
+        width: 90%;
+        & p{
+            margin-top: 22px;
+            color: darkgrey;
+            & span{
+                font-size: 18px;
+                color: white;
+            }
+        }
+    }
+    &__buy{
+        position: relative;
+        float: right;
+        top: -40px;
+        & p{
+            font-size: 14px;
+            color: @hrefColor;
+            cursor: pointer;
+        }
+        & i{
+            position: relative;
+            left:5px;
+            top: 1px;
+            display: inline-block;
+            background: url(img/cart.svg);
+            width: 23px;
+            height: 29px;
+        }
+    }
+}
+/* 
+88""Yb 88""Yb  dP"Yb  8888b.  88   88  dP""b8 888888     .dP"Y8 888888  dP""b8 888888 88  dP"Yb  88b 88     888888 88b 88 8888b.  
+88__dP 88__dP dP   Yb  8I  Yb 88   88 dP   `"   88       `Ybo." 88__   dP   `"   88   88 dP   Yb 88Yb88     88__   88Yb88  8I  Yb 
+88"""  88"Yb  Yb   dP  8I  dY Y8   8P Yb        88       o.`Y8b 88""   Yb        88   88 Yb   dP 88 Y88     88""   88 Y88  8I  dY 
+88     88  Yb  YbodP  8888Y"  `YbodP'  YboodP   88       8bodP' 888888  YboodP   88   88  YbodP  88  Y8     888888 88  Y8 8888Y"  
+ */
+
+/* 
+.dP"Y8 88     88 8888b.  888888 88""Yb 
+`Ybo." 88     88  8I  Yb 88__   88__dP 
+o.`Y8b 88  .o 88  8I  dY 88""   88"Yb  
+8bodP' 88ood8 88 8888Y"  888888 88  Yb  */
+.slider h2.section-title{
+    font-size: 30px;
+}
+.slider__container {
+  height: 295px;
+
+}
+.slider__container .slider__items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.slider__container p{
+    display: inline-block;
+    line-height: 20px;
+    position: relative;
+    left:0px;
+    float: left;
+    width: 99%;
+    text-align: left;
+    line-height: 20px;
+    margin-top: 26px;
+}
+.slider__container .slider__items li {
+  float: left;
+  width: 160px;
+  height: 100%;
+  margin: 0 1px 0 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.slider__container .slider__items li img{
+    width: 100%;
+}
+.slider__container .slider__items li:first-child{
+    margin-left: 0px;
+}
+.slider__container .slider__items li:last-child{
+    margin-right: 0px;
+}
+/* Scrollbar */
+.scrollbar {
+  position: relative;
+  margin: 0 auto;
+  height: 30px;
+  width: 100%;
+  line-height: 0;
+  margin-bottom: 35px;
+}
+.scrollbar:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  margin-top: -1px;
+  background-color: black;
+  z-index: 0;
+}
+.scrollbar .handle {
+  box-sizing: border-box;
+  position: relative;
+  top: 5px;
+  width: 45px;
+  height: 18px;
+  border-radius: 15px;
+  background-color: #393a3c;
+  border: 3px solid @hrefColor;
+  cursor: pointer;
+}
+.scrollbar .handle .mousearea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+}
+/* hover */
+.slider__items li{
+    position: relative;
+    cursor: default !important;
+}
+.slider__shadow {
+  position: absolute;
+  opacity: 0;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  height: 54.2%;
+  -webkit-transition: all ease 0.3s;
+          transition: all ease 0.3s;
+}
+.slider__items img{
+    display: inline-block;
+}
+.slider__items li:hover .slider__shadow {
+  opacity: 1;
+  background: rgba(16, 18, 19, 0.9);
+}
+
+/* 
+.dP"Y8 88     88 8888b.  888888 88""Yb     888888 88b 88 8888b.  
+`Ybo." 88     88  8I  Yb 88__   88__dP     88__   88Yb88  8I  Yb 
+o.`Y8b 88  .o 88  8I  dY 88""   88"Yb      88""   88 Y88  8I  dY 
+8bodP' 88ood8 88 8888Y"  888888 88  Yb     888888 88  Y8 8888Y"   */
+
+/* 
+8888b.  888888 88     88 Yb    dP 888888 88""Yb Yb  dP 
+ 8I  Yb 88__   88     88  Yb  dP  88__   88__dP  YbdP  
+ 8I  dY 88""   88  .o 88   YbdP   88""   88"Yb    8P   
+8888Y"  888888 88ood8 88    YP    888888 88  Yb  dP  */
+.delivery{
+    padding-bottom: 55px;
+    & h4.section-title{
+        text-align: left;
+    }
+    & p{
+        color:white;
+        font-size: 14px;
+    }
+    &__maps{
+        position: relative;
+        & img{
+            display: block;
+        }
+    }
+    & .button-label{
+        position: absolute;
+        border:none;
+        background: @hrefColor;
+        width: 9px;
+        height: 9px;
+        border-radius: 10px;
+        outline: none;
+        padding: 0px;
+        &--kaliningrad{
+             top: 130px;
+            left: 39px;
+        }
+    }
+    & .tooltip{
+        font-family: philosopherregular;
+        font-size: 14px;
+    }
+}
+/* 
+8888b.  888888 88     88 Yb    dP 888888 88""Yb Yb  dP     888888 88b 88 8888b.  
+ 8I  Yb 88__   88     88  Yb  dP  88__   88__dP  YbdP      88__   88Yb88  8I  Yb 
+ 8I  dY 88""   88  .o 88   YbdP   88""   88"Yb    8P       88""   88 Y88  8I  dY 
+8888Y"  888888 88ood8 88    YP    888888 88  Yb  dP        888888 88  Y8 8888Y"   */
+
+/* 
+.dP"Y8 888888  dP"Yb  
+`Ybo." 88__   dP   Yb 
+o.`Y8b 88""   Yb   dP 
+8bodP' 888888  YbodP   */
+.seo{
+    & .container-fluid .section-container{
+        border-top: none;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 10px;
+    }
+    & h2{
+        margin-bottom: 0px;
+    }
+    & h3{
+        margin-bottom: 15px;
+        font-size: 30px;
+        line-height: 26px;
+    }
+    &__container{
+        background: url(img/seo_bg.jpg);
+        margin-top: 40px;
+    }
+    &__item{
+        min-height: 528px;
+        background: rgba(38, 40, 40, 0.6);
+        text-align: center;
+        padding: 56px 20px 0px 20px;
+        position: relative;
+    }
+    &__info{
+        min-height: 190px;
+    }
+    p {
+        font-size: 15px;
+        line-height: 18px;
+        color: white;
+    }
+}
+/* 
+.dP"Y8 888888  dP"Yb      888888 88b 88 8888b.  
+`Ybo." 88__   dP   Yb     88__   88Yb88  8I  Yb 
+o.`Y8b 88""   Yb   dP     88""   88 Y88  8I  dY 
+8bodP' 888888  YbodP      888888 88  Y8 8888Y"   */
+/* 
+888888 888888 888888 8888b.  88""Yb    db     dP""b8 88  dP 
+88__   88__   88__    8I  Yb 88__dP   dPYb   dP   `" 88odP  
+88""   88""   88""    8I  dY 88""Yb  dP__Yb  Yb      88"Yb  
+88     888888 888888 8888Y"  88oodP dP""""Yb  YboodP 88  Yb 
+ */
+.feedback{
+    margin-top: 37px;
+}
+form{
+    text-align: center;
+    margin-bottom: 45px;
+    & input, textarea{
+        width: 100%;
+        outline: none;
+        border: none;
+        margin-bottom: 6px;
+        font-size: 18px;
+        padding: 10px 19px;
+        border-radius: 23px;
+        background: #454648;
+    }
+    & textarea{
+        height: 100px;
+        margin-bottom: 25px;
+    }
+    & input[type="submit"]{
+        outline: none;
+        border: 1px solid @hrefColor;
+        border-radius: 45px;
+        color: @hrefColor;
+        font-size: 18px;
+        line-height: 18px;
+        padding: 10px 40px;
+        text-align: center;
+        background: none;
+        width: auto;
+        
+    }
+}
+.form-group{
+    position: relative;
+}
+.help-block{
+    position: relative;
+    transition: all ease 0.3s;
+    font-size: 18px;
+    top: -3px;
+}
+
+/* 
+888888 888888 888888 8888b.  88""Yb    db     dP""b8 88  dP     888888 88b 88 8888b.  
+88__   88__   88__    8I  Yb 88__dP   dPYb   dP   `" 88odP      88__   88Yb88  8I  Yb 
+88""   88""   88""    8I  dY 88""Yb  dP__Yb  Yb      88"Yb      88""   88 Y88  8I  dY 
+88     888888 888888 8888Y"  88oodP dP""""Yb  YboodP 88  Yb     888888 88  Y8 8888Y"  
+ */
+
+
+
+
+/* 
+8b    d8  dP"Yb  8b    d8    db    88         Yb        dP 88 88b 88 8888b.   dP"Yb  Yb        dP 
+88b  d88 dP   Yb 88b  d88   dPYb   88          Yb  db  dP  88 88Yb88  8I  Yb dP   Yb  Yb  db  dP  
+88YbdP88 Yb   dP 88YbdP88  dP__Yb  88  .o       YbdPYbdP   88 88 Y88  8I  dY Yb   dP   YbdPYbdP   
+88 YY 88  YbodP  88 YY 88 dP""""Yb 88ood8        YP  YP    88 88  Y8 8888Y"   YbodP     YP  YP    
+ */
+.modal-content{
+    background: #393a3c;
+    padding: 30px 50px 35px 40px;
+}
+button.close{
+    background:url(img/sprites.png) no-repeat -154px 0;
+    width: 19px;
+    height: 19px;
+    opacity: 1;
+    text-shadow: none;
+}
+.close:hover, .close:focus{
+    opacity: 1;
+}
+.modal-header{
+    border-bottom: none;
+    padding-bottom: 20px;
+    padding-right: 0px;
+    & p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+.modal-title{
+    color: #feffff;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.modal-item{
+    &__img{
+        box-sizing: border-box;
+        display: inline-block;
+        width: 49%;
+    }
+    &__basic-info{
+        box-sizing: border-box;
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        & p{
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+    }
+    &__button{
+        text-align: center;
+    }
+    .table-head{
+        margin-top: 45px;
+        margin-bottom: 60px;
+        & tr:first-child{
+            border-top: 0px;
+        }
+        & td{
+            text-align: left;
+            padding-left: 0px;
+        }
+    }
+    & .button--product{
+        box-sizing: border-box;
+        width: 250px;
+        padding: 5px 50px 8px 50px;
+        display: inline-block;
+        line-height: 21px;
+        margin-bottom: 40px;
+    }
+    & .product__buy{
+        display: inline-block;
+        top:-27px;
+        & p{
+            font-size: 20px;
+        }
+        & i{
+            position: relative;
+            top: 7px;
+            left: 5px;
+        }
+    }
+    &__info{
+        label{
+            padding-right: 5px;
+        }
+    }
+    & .button--buy{
+        top:0px;
+    }
+}
+table{
+        border-bottom:1px solid #545454;
+        width: 100%;
+        margin-bottom: 25px;
+        & th{
+            text-align: left;
+            color: @hrefColor;
+            font-weight: 700;
+        }
+        & tr{
+            border-top:1px solid #545454;
+            height: 34px;
+            vertical-align: middle;
+            & td{
+                padding-left: 35px;
+                color: darkgrey;
+            }
+            & td:first-child{
+                padding-left: 0px;
+                color: white;
+            }
+        }
+    }
+.modal-sm{
+    width: 580px;
+    & .modal-content{
+        padding-bottom: 0px;
+    }
+    & .form-feedback{
+        margin-bottom: 0px;
+    }
+}
+/* select */
+select{
+    outline: none;
+}
+.jq-selectbox{
+        margin-right: 25px;
+    &__select{
+        border-radius: 16px;
+        background: #454648;
+        border: none;
+        box-shadow: none;
+        text-shadow:none;
+        color: white;
+        outline: none;
+        padding-right: 10px;
+        &:hover{
+            background: #454648;
+            & .jq-selectbox__trigger-arrow{
+                border-top: 5px solid @hrefColor;
+                outline: none;
+            }
+        }
+        &:active{
+            box-shadow: none;
+            outline: none;
+        }
+        &-text{
+            font-family: philosopherregular;
+        }
+    }
+    & .placeholder{
+        font-family: philosopherregular;
+    }
+    &__trigger{
+        border-left: none;
+    }
+    &__trigger-arrow{
+        border-top: 5px solid @hrefColor;
+    }
+    &__dropdown{
+        background: #454648;
+        border:none;
+    }
+    & li{
+        font-family: philosopherregular;
+        color: darkgrey;
+    }
+    & li.selected{
+        background: black;
+    }
+}
+/* select end*/
+
+/* order modal */
+.order-container {
+    .jq-selectbox{
+        width: 100%;
+        & li{
+            font-size: 16px;
+        }
+    }
+    .jq-selectbox__select{
+        background: #393a3c;
+        padding-left: 0px;
+        color: darkgrey;
+        font-size: 16px;
+    }
+    td{
+        text-align: left;
+    }
+    form{
+        text-align: left;
+    }
+    input[type="submit"]{
+        margin-top: 15px;
+    }
+    table{
+        width: 95%;
+        margin-left: 10px;
+    }
+}
+/* order modal end */
+
+/* lk modal */
+.lk-container{
+    & p{
+        margin-top: 0px;
+    }
+    & a{
+        display: inline-block;
+        border-bottom: 1px dashed @hrefColor;
+        &:hover{
+            border-bottom: none;
+        }
+    }
+    & .personal-img{
+        position: relative;
+        width: 130px;
+        height: 140px;
+        margin-bottom: 10px;
+        & img{
+            width: 100%;
+            height: auto;
+        }
+        
+    }
+    .form-lk{
+        position: relative;
+        text-align: left;
+        & a{
+            display: inline-block;
+            margin-left: 10px;
+        }
+        & input[type="file"]{
+            width: 326px;
+            display: block;
+            position: absolute;
+            bottom: -20px;
+            opacity: 0;
+            z-index: 100;
+            left: -173px;
+            cursor: pointer !important;
+        }
+    }
+    & table{
+        & a{
+            color: @hrefColor;
+            border-bottom: none;
+        }
+    }
+    
+
+
+}
+/* lk modal end */
+/* 
+8b    d8  dP"Yb  8888b.     db    88         Yb        dP 88 88b 88 8888b.   dP"Yb  Yb        dP     888888 88b 88 8888b.  
+88b  d88 dP   Yb  8I  Yb   dPYb   88          Yb  db  dP  88 88Yb88  8I  Yb dP   Yb  Yb  db  dP      88__   88Yb88  8I  Yb 
+88YbdP88 Yb   dP  8I  dY  dP__Yb  88  .o       YbdPYbdP   88 88 Y88  8I  dY Yb   dP   YbdPYbdP       88""   88 Y88  8I  dY 
+88 YY 88  YbodP  8888Y"  dP""""Yb 88ood8        YP  YP    88 88  Y8 8888Y"   YbodP     YP  YP        888888 88  Y8 8888Y"  
+ */
+
+
+
+/* 
+888888  dP"Yb   dP"Yb  888888 888888 88""Yb 
+88__   dP   Yb dP   Yb   88   88__   88__dP 
+88""   Yb   dP Yb   dP   88   88""   88"Yb  
+88      YbodP   YbodP    88   888888 88  Yb  */
+.footer{
+    background: url(img/footer_bg.jpg) repeat;
+    & p{
+        box-sizing: border-box;
+        display: inline-block;
+        font-size: 24px;
+        line-height: 100px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color:white;
+    }
+    &__logo{
+        & img{
+            display: inline-block;
+            position: relative;
+            top:-4px;
+        }
+        & p{
+            margin-left: 10px;
+        }
+        & span{
+            font-size: 14px;
+        }
+    }
+    &__tel{
+        & img{
+            position: relative;
+            top: -5px;
+            left: -10px;
+        }
+        & a:hover{
+            color: white;
+        }
+    }
+    &__feedback{
+        & img{
+            position: relative;
+            top: -5px;
+            left: -10px;
+        }
+        & p{
+            color: @hrefColor;
+            font-size: 18px;
+        }
+        & a{
+            font-size: 18px;
+            color: @hrefColor;
+        }
+    }
+    &__social{
+        line-height: 100px;
+        & i{
+            margin-right: 5px;
+            position: relative;
+        }
+        & .fb{
+            display: inline-block;
+            background: url(img/sprites.png) no-repeat -187px 0;
+            width: 7px;
+            height: 16px;
+        }
+        & .vk{
+            display: inline-block;
+            background: url(img/sprites.png) no-repeat -1px 0;
+            width: 25px;
+            height: 26px;
+            top:5px;
+        }
+        & .insta{
+            display: inline-block;
+            background: url(img/sprites.png) no-repeat -45px 0;
+            width: 13px;
+            height: 13px;
+        }
+        & .google{
+            display: inline-block;
+            background: url(img/sprites.png) no-repeat -28px 0;
+            width: 15px;
+            height: 13px;
+        }
+    }
+}
+/* 
+888888  dP"Yb   dP"Yb  888888 888888 88""Yb     888888 88b 88 8888b.  
+88__   dP   Yb dP   Yb   88   88__   88__dP     88__   88Yb88  8I  Yb 
+88""   Yb   dP Yb   dP   88   88""   88"Yb      88""   88 Y88  8I  dY 
+88      YbodP   YbodP    88   888888 88  Yb     888888 88  Y8 8888Y"   */
+
+
+@import 'responsive.less';

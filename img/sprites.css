@@ -1,0 +1,46 @@
+.s-1, .s-12, .decor, .scissors, .social_g+, .social_insta, .social_vk{
+	background: url(sprites.png) no-repeat;
+}
+
+.s-1{
+	background-position: -154.00000381469727px 0;
+	width: 19px;
+	height: 19px;
+}
+
+.s-12{
+	background-position: -176.00000381469727px 0;
+	width: 8px;
+	height: 7px;
+}
+
+.decor{
+	background-position: -107.00000381469727px 0;
+	width: 45px;
+	height: 18px;
+}
+
+.scissors{
+	background-position: -61.000003814697266px 0;
+	width: 44px;
+	height: 22px;
+}
+
+.social_g+{
+	background-position: -28.000003814697266px 0;
+	width: 15px;
+	height: 13px;
+}
+
+.social_insta{
+	background-position: -45.000003814697266px 0;
+	width: 13px;
+	height: 13px;
+}
+
+.social_vk{
+	background-position: -1px 0;
+	width: 25px;
+	height: 26px;
+}
+
