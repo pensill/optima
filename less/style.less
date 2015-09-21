@@ -10,17 +10,21 @@ body{
 }
 a{
     color: white;
+    outline:none;
     &:hover{
         color: @hrefColor;
         text-decoration: none;
+        outline:none;
     }
     &:visited{
         text-decoration: none;
         color: @hrefColor;
+        outline:none;
     }
     &:focus{
         text-decoration: none;
         color: @hrefColor;
+        outline:none;
     }
 }
 h1{
@@ -48,7 +52,7 @@ p{
     width: 1320px;
 }
 .button{
-    outline: none;
+    outline: none !important;
     border: 1px solid @hrefColor;
     border-radius: 45px;
     color: @hrefColor;
@@ -74,6 +78,7 @@ p{
 ::-moz-placeholder          {color:white;}/* Firefox 19+ */
 .page-header{
     background: url(img/header_bg.jpg);
+    background-size: cover;
 }
 .top-menu__container{
     background: rgba(31, 31, 33, 0.8);
@@ -121,6 +126,7 @@ p{
             }
         }
         &--lk{
+            text-align: right;
             & i{
                 display: inline-block;
                 width: 21px;
@@ -138,13 +144,39 @@ p{
                 }
             }
         }
+        &--cart{
+            text-align: right;
+            & i{
+                display: inline-block;
+                width: 23px;
+                height: 29px;
+                background: url(img/cart.svg);
+                margin-right: 10px;
+                position: relative;
+                top:5px;
+            }
+            & a{
+                font-size: 18px;
+                color: white;
+                &:hover{
+                    color:@hrefColor;
+                }
+            }
+            & span{
+                color: #f79f09;
+            }
+        }
     }
 } /* top-menu end */
+.hamburger{
+    display: none;
+}
 .menu{
     margin-bottom: 120px;
     &__items{
         list-style: none;
         text-align: center;
+
     }
     &__item{
         display: inline-block;
@@ -176,13 +208,21 @@ p{
 .tagline{
     text-align: center;
     margin-bottom: 55px;
+    &__logo {
+        display: inline-block;
+        position: relative;
+        top: -35px;
+    }
+
     & h1{
+        display: inline-block;
         font-size: 120px;
         line-height: 45px;
         margin: 0px;
         letter-spacing: 14px;
     }
     & p{
+        color: #f79f09;
         font-size: 20px;
         letter-spacing: 5px;
         padding-top: 4px;
@@ -231,6 +271,15 @@ main{
     padding-top: 30px;
     & .product__item{
         position: relative;
+
+        & .product__item--new{
+            display: inline-block;
+            position: absolute;
+            color: #f79f09;
+            font-weight: 600;
+            right: 10px;
+            top: -8px;
+        }
     }
     &__main{
         margin-bottom: 35px;
@@ -329,6 +378,13 @@ main{
             height: 29px;
         }
     }
+}
+.container-for-select{
+    border: 1px solid #f79f09;
+    padding-top: 28px;
+    border-radius: 10px;
+    padding-left: 25px;
+    margin-bottom: 20px;
 }
 /* 
 88""Yb 88""Yb  dP"Yb  8888b.  88   88  dP""b8 888888     .dP"Y8 888888  dP""b8 888888 88  dP"Yb  88b 88     888888 88b 88 8888b.  
@@ -552,6 +608,12 @@ o.`Y8b 88""   Yb   dP     88""   88 Y88  8I  dY
  */
 .feedback{
     margin-top: 37px;
+
+    &__contact{
+        & .section-title{
+            text-align: left;
+        }
+    }
 }
 form{
     text-align: center;
@@ -859,11 +921,9 @@ select{
         & a{
             color: @hrefColor;
             border-bottom: none;
-        }
+        }   
     }
     
-
-
 }
 /* lk modal end */
 /* 
@@ -873,6 +933,415 @@ select{
 88 YY 88  YbodP  8888Y"  dP""""Yb 88ood8        YP  YP    88 88  Y8 8888Y"   YbodP     YP  YP        888888 88  Y8 8888Y"  
  */
 
+
+ /* 
+ dP""b8    db    88      dP""b8 88   88 88        db    888888  dP"Yb  88""Yb 
+ dP   `"   dPYb   88     dP   `" 88   88 88       dPYb     88   dP   Yb 88__dP 
+ Yb       dP__Yb  88  .o Yb      Y8   8P 88  .o  dP__Yb    88   Yb   dP 88"Yb  
+ YboodP dP""""Yb 88ood8  YboodP `YbodP' 88ood8 dP""""Yb   88    YbodP  88  Yb  */
+.calculator-container{
+    & table tr {
+        border-top: none;
+        border-bottom: 1px solid #545454
+    }
+    & th{
+        font-size:16px;
+        color: white;
+        padding-right: 10px;
+        vertical-align: top;
+    }
+    & table tr td {
+        padding:2px 10px 2px 0px;
+    }
+    & table tr td:first-child{
+        color: @hrefColor;
+        padding-left: 10px;
+    }
+    & input{
+        width: 100px;
+        outline: none;
+        border: none;
+        margin-bottom: 0px;
+        font-size: 18px;
+        padding: 5px 19px;
+        border-radius: 23px;
+        background: #454648;
+    }
+    & .jq-selectbox__select{
+        width: 200px;
+        padding-left: 20px;
+    }
+    & .jq-selectbox__select-text{
+        font-size:16px;
+    }
+    & .region{
+        & td{
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color:  @hrefColor;
+        }
+    }
+    & .total{
+        td:first-child{
+            color: white !important;
+            text-align: right;
+            padding-right: 73px;
+        }
+        td:nth-child(3){
+            color: white !important;
+        }
+    }
+    .block-info{
+        background: #2b2c2e;
+        padding: 10px 15px;
+        & p{
+            font-size:20px;
+            color: white;
+            margin: 0px;
+        }
+        & span{
+            color: @hrefColor;
+        }
+    }
+    & .button--calculate_container{
+        text-align: right;
+    }
+    & .button--calculate {
+        width: 100%;
+        font-size: 18px;
+        padding: 10px 35px;
+        position: relative;
+        top: 10px;
+    }
+    & .button--checkout_container{
+        margin-top: 30px;
+    }
+    & .button--checkout{
+        width: 100%;
+        font-size: 18px;
+        padding: 10px 35px;
+    }
+    & .jq-selectbox__dropdown{
+        width: 200px !important;
+    }
+}
+/*  dP""b8    db    88      dP""b8 88   88 88        db    888888  dP"Yb  88""Yb     888888 88b 88 8888b.  
+dP   `"   dPYb   88     dP   `" 88   88 88       dPYb     88   dP   Yb 88__dP     88__   88Yb88  8I  Yb 
+Yb       dP__Yb  88  .o Yb      Y8   8P 88  .o  dP__Yb    88   Yb   dP 88"Yb      88""   88 Y88  8I  dY 
+YboodP dP""""Yb 88ood8  YboodP `YbodP' 88ood8 dP""""Yb   88    YbodP  88  Yb     888888 88  Y8 8888Y"   */
+
+/* 
+ dP""b8    db    88""Yb 888888 
+dP   `"   dPYb   88__dP   88   
+Yb       dP__Yb  88"Yb    88   
+ YboodP dP""""Yb 88  Yb   88    */
+.cart-container{
+    & table tr td:last-child{
+        color: @hrefColor;
+    }
+    & .total td:last-child{
+        color: #a9a9a9;
+    }
+    & .total td:first-child{
+        text-align: right;
+        padding-right: 10px;
+    }
+    & .button--calculate{
+        top:0px
+    }
+    & .button--checkout_container{
+        margin-top: 0px;
+    }
+}
+/* 
+ dP""b8    db    88""Yb 888888     888888 88b 88 8888b.  
+dP   `"   dPYb   88__dP   88       88__   88Yb88  8I  Yb 
+Yb       dP__Yb  88"Yb    88       88""   88 Y88  8I  dY 
+ YboodP dP""""Yb 88  Yb   88       888888 88  Y8 8888Y"   */
+
+/* 
+88 88b 88 888888 888888 88""Yb          88     88  dP 
+88 88Yb88   88   88__   88__dP ________ 88     88odP  
+88 88 Y88   88   88""   88"Yb  """""""" 88  .o 88"Yb  
+88 88  Y8   88   888888 88  Yb          88ood8 88  Yb  */
+.inter-lk{
+    & .modal-content{
+        box-sizing: border-box;
+        width: 450px;
+        padding: 20px 30px 15px 30px;
+    }
+    & .modal-body{
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    & .modal-title{
+        font-size:24px;
+    }
+    & .modal-header .close {
+        margin-top: 6px;
+    }
+    & form{
+        margin-bottom: 0px;
+        text-align: left;
+    }
+    & form input[type="submit"]{
+        margin-top: 13px;
+        margin-right: 10px;
+    }
+    & span{
+        color: @hrefColor;
+    }
+    & a{
+        color: @hrefColor;
+        font-size:14px;
+    }
+    & .forgot-pass{
+        width: 30px;
+        height: 30px;
+        background: red;
+        top: -31px;
+        position: relative;
+        cursor: pointer;
+    }
+    & .check--password{
+        display: inline-block;
+        opacity:0.3;
+        height: 20px;
+        width: 20px;
+        top:6px;
+        opacity: 1;
+    }
+    
+    
+
+    & input[type="checkbox"].check--password:checked + .forgot-pass{
+        background: green;
+    }
+}
+/* 
+88 88b 88 888888 888888 88""Yb          88     88  dP     888888 88b 88 8888b.  
+88 88Yb88   88   88__   88__dP ________ 88     88odP      88__   88Yb88  8I  Yb 
+88 88 Y88   88   88""   88"Yb  """""""" 88  .o 88"Yb      88""   88 Y88  8I  dY 
+88 88  Y8   88   888888 88  Yb          88ood8 88  Yb     888888 88  Y8 8888Y"   */
+
+/* 
+.dP"Y8 88""Yb 888888  dP""b8 88 888888 88  dP""b8    db    888888 88  dP"Yb  88b 88 .dP"Y8          8b    d8  dP"Yb  8888b.     db    88         
+`Ybo." 88__dP 88__   dP   `" 88 88__   88 dP   `"   dPYb     88   88 dP   Yb 88Yb88 `Ybo." ________ 88b  d88 dP   Yb  8I  Yb   dPYb   88         
+o.`Y8b 88"""  88""   Yb      88 88""   88 Yb       dP__Yb    88   88 Yb   dP 88 Y88 o.`Y8b """""""" 88YbdP88 Yb   dP  8I  dY  dP__Yb  88  .o     
+8bodP' 88     888888  YboodP 88 88     88  YboodP dP""""Yb   88   88  YbodP  88  Y8 8bodP'          88 YY 88  YbodP  8888Y"  dP""""Yb 88ood8      */
+
+
+
+.specifications-modal{
+    & .modal-content{
+        box-sizing: border-box;
+        width: 860px;
+        padding: 20px 30px 15px 40px;
+    }
+    & .modal-body{
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    & .but--product{
+        width: 231px !important;
+        display: block;
+        padding: 5px 40px;
+    }
+    & .jq-selectbox {
+        margin-right: -30px;
+    }
+    & .modal-item__info{
+        & .col-md-3:nth-child(1){
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        & .col-md-3:nth-child(2){
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        & .product__buy{
+            top: -15px
+        }
+    }
+    & .product__main{
+        & p{
+            margin-top: 0px;
+        }
+    }
+    & .modal-item__button {
+        margin-bottom: 20px;
+    }
+    & .button--buy{
+        position: inherit;
+    }
+    & .modal-header{
+        padding-left: 0px;
+    }
+}
+
+
+/* 
+.dP"Y8 88""Yb 888888  dP""b8 88 888888 88  dP""b8    db    888888 88  dP"Yb  88b 88 .dP"Y8          8b    d8  dP"Yb  8888b.     db    88         888888 88b 88 8888b.  
+`Ybo." 88__dP 88__   dP   `" 88 88__   88 dP   `"   dPYb     88   88 dP   Yb 88Yb88 `Ybo." ________ 88b  d88 dP   Yb  8I  Yb   dPYb   88         88__   88Yb88  8I  Yb 
+o.`Y8b 88"""  88""   Yb      88 88""   88 Yb       dP__Yb    88   88 Yb   dP 88 Y88 o.`Y8b """""""" 88YbdP88 Yb   dP  8I  dY  dP__Yb  88  .o     88""   88 Y88  8I  dY 
+8bodP' 88     888888  YboodP 88 88     88  YboodP dP""""Yb   88   88  YbodP  88  Y8 8bodP'          88 YY 88  YbodP  8888Y"  dP""""Yb 88ood8     888888 88  Y8 8888Y"   */
+
+
+/* 
+dP""b8 88  88 888888  dP""b8 88  dP  dP"Yb  88   88 888888 
+dP   `" 88  88 88__   dP   `" 88odP  dP   Yb 88   88   88   
+Yb      888888 88""   Yb      88"Yb  Yb   dP Y8   8P   88   
+YboodP 88  88 888888  YboodP 88  Yb  YbodP  `YbodP'   88    */
+.checkout {
+    & .modal-dialog.modal-lg{
+        left: -7px !important;
+        width: 780px;
+    }
+    & form{
+        margin-bottom: 0px;
+    }
+    & .jq-selectbox{
+        margin-right: 0px;
+        width: 270px;
+        position: relative;
+        top: 13px;
+    }
+    & .jq-selectbox .placeholder{
+        padding-left: 35px;
+    }
+    & .jq-selectbox .placeholder:after, .jq-selectbox__select-text:after{
+        content:'';
+        position: absolute;
+        background: #000;
+        display: block;
+        background: url(img/sprites.png) no-repeat -195px 0;
+        width: 22px;
+        height: 14px;
+        top: 9px;
+        left: 15px;
+    }
+    & .jq-selectbox__select-text{
+        padding-left: 35px;
+        text-align: left;
+    }
+    & .jq-selectbox li {
+        text-align: left;
+        padding-left: 20px;
+    }
+    & .button--checkout{
+        display: block;
+        float: right;
+        padding: 10px 35px;
+        margin-right: 20px;
+    }
+    &__inner{
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #545454;
+    }
+    &__delivery {
+        text-align: left;
+    }
+    &__payment{
+        text-align: left;
+        position: relative;
+    }
+    & p{
+        color: white;
+    }
+}
+.check {
+    display: block;
+    position: relative;
+    z-index:150;
+    opacity:0;
+    height: 32px;
+    top: 6px;
+    margin-bottom: 0px;
+    cursor:pointer;
+    margin-top: 10px;
+}
+.payment__block{
+    background: #000;
+    width: 270px;
+    height: 32px;
+    border-radius: 20px;
+    position: absolute;
+    z-index:100;
+    background: #454648;
+    color: @hrefColor;
+    padding-top: 4px;
+    padding-left: 45px;
+    cursor:pointer;
+    transition: all ease 0.3s;
+}
+.payment__block__card{
+    top: 43px;
+}
+.payment__block__card:before{
+    content:"";
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    background: url('img/sprites.png') no-repeat -219px -16px;
+    width: 21px;
+    height: 14px;
+}
+input[type="checkbox"].check:checked + .payment__block__card{
+    color: white;
+    background: @hrefColor;
+}
+input[type="checkbox"].check:checked + .payment__block__card:before{
+    background: url('img/sprites.png') no-repeat -219px 0;
+}
+.payment__block__translation:before{
+    content:"";
+    display: block;
+    position: absolute;
+    left: 19px;
+    top: 8px;
+    background: url('img/sprites.png') no-repeat -242px -0px;
+    width: 12px;
+    height: 17px;
+}
+.payment__block__translation{
+    top: 86px;
+}
+input[type="checkbox"].check:checked + .payment__block__translation{
+    color: white;
+    background: @hrefColor;
+}
+input[type="checkbox"].check:checked + .payment__block__translation:before{
+    background: url('img/sprites.png') no-repeat -242px -19px;
+}
+.payment__block__pickup{
+    top:60px;
+}
+.payment__block__pickup:before{
+    content:"";
+    display: block;
+    position: absolute;
+    left: 14px;
+    top: 8px;
+    background: url('img/sprites.png') no-repeat -256px -20px;
+    width: 22px;
+    height: 19px;
+}
+input[type="checkbox"].check:checked + .payment__block__pickup{
+    color: white;
+    background: @hrefColor;
+}
+input[type="checkbox"].check:checked + .payment__block__pickup:before{
+    background: url('img/sprites.png') no-repeat -255px 0px;
+}
+/* 
+ dP""b8 88  88 888888  dP""b8 88  dP  dP"Yb  88   88 888888     888888 88b 88 8888b.  
+dP   `" 88  88 88__   dP   `" 88odP  dP   Yb 88   88   88       88__   88Yb88  8I  Yb 
+Yb      888888 88""   Yb      88"Yb  Yb   dP Y8   8P   88       88""   88 Y88  8I  dY 
+ YboodP 88  88 888888  YboodP 88  Yb  YbodP  `YbodP'   88       888888 88  Y8 8888Y"   */
 
 
 /* 
@@ -970,3 +1439,6 @@ select{
 
 
 @import 'responsive.less';
+
+
+

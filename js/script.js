@@ -1,5 +1,6 @@
 $(document).ready(function() {
 /*animate buttons product*/ 
+if(document.documentElement.clientWidth > 1260) {
     $('.product__container').hover(
         function(){
             $(this).children('.button--product--sample').toggleClass('fadeInDown').css('display', 'block');
@@ -20,7 +21,9 @@ $(document).ready(function() {
             $(this).children('.button--product--specifications').toggleClass('fadeInUp').css('display', 'none');
         }
     );
+};
 /*animate buttons product end*/
+
 
 /*slider*/
     var $frame  = $('.slider__container');
@@ -199,5 +202,11 @@ $(document).ready(function() {
 /*styling select end*/
 
 
+
+/*mobile menu*/
+  $('.hamburger').click(function(){
+    $('.menu__items').slideToggle();
+  });
+/*mobile menu end*/
 })
 
